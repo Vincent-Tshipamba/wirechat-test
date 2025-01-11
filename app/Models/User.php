@@ -46,4 +46,13 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function canCreateChats(): bool
+    {
+        return true;
+    }
+
+    public function canCreateGroups(): bool{
+        return true;
+    }
 }
